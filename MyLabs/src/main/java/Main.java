@@ -15,5 +15,7 @@ public class Main {
 						ServiceType.ContractCreation))) {
 			System.out.println(lawyer.getName());
 		}
+		LawyerToFileWriter writer = new LawyerToFileWriter();
+		writer.writeToFile(manager.getLawyers());
 	}
 }

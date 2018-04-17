@@ -8,6 +8,10 @@ public class Lawyer {
 	private List<ServiceType> abilitiesOfLawyer = new ArrayList<ServiceType>();
 	final static String COMA = ",";
 	
+	public String toCSV(Lawyer lawyer) {
+        return getName() + COMA + LawFirmManager.lawyerAbilitiesToString(lawyer);
+	}
+	
 	public static String getHeaders() {
         return "lawyer_name,abilities";
 	}

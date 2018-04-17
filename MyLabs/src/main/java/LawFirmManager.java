@@ -32,5 +32,13 @@ public class LawFirmManager {
 	public final void addLawyer(final Lawyer lawyer) {
 		this.lawyers.add(lawyer);
 	}
+	
+	public static String lawyerAbilitiesToString(Lawyer lawyer) {
+		StringBuilder stringBuilder = new StringBuilder("");
+		for(ServiceType serviceType: lawyer.getAbilitiesOfLawyer()) {
+			stringBuilder.append(", " + serviceType.toString());
+		}
+		return stringBuilder.toString().replaceFirst(", ", "");
+		}
 }
 
