@@ -12,10 +12,6 @@ public class Lawyer {
         return "lawyer_name,abilities";
 	}
 	
-	public String toCSV(Lawyer lawyer) {
-        return getName() + COMA + LawFirmManager.lawyerAbilitiesToString(lawyer);
-	}
-	
 	public final List<ServiceType> getAbilitiesOfLawyer() {
 		return abilitiesOfLawyer;
 	}
